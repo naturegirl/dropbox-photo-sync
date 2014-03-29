@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.naturegirl.photodrops"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.naturegirl.photodrops.PhotoDropsMainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+	    <activity
+	        android:name="com.naturegirl.photodrops.PhotoSelectActivity"
+	        android:label="Select photos"
+	        android:parentActivityName="com.naturegirl.photodrops.PhotoDropsMainActivity" >
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.piqular.PiqularMainActivity" />
+	    </activity>
+	    
+        <activity android:name="com.dropbox.sync.android.DbxAuthActivity" />
+		<activity
+		  android:name="com.dropbox.client2.android.AuthActivity"
+		  android:launchMode="singleTask" >
+		  <intent-filter>
+		    <data android:scheme="db-9ru8m7tezw2bg1t" />
+		    <action android:name="android.intent.action.VIEW" />
+		    <category android:name="android.intent.category.BROWSABLE" />
+		    <category android:name="android.intent.category.DEFAULT" />
+		  </intent-filter>
+		</activity>
+		<service
+		  android:name="com.dropbox.sync.android.DbxSyncService"
+		  android:enabled="true"
+		  android:exported="false"
+		  android:label="Dropbox Sync" />
+    </application>
+
+</manifest>
