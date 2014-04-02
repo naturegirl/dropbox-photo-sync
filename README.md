@@ -1,8 +1,22 @@
 # Dropbox Photo Sync
 
-**Dropbox Photo Sync** is an Android app that allows you to sync selected photos on your cell phone with Dropbox. It uses Dropbox's Android Sync API and has been written as a pet project to try out the API. The inspiration came from wanting to make photo transfer between my cell phone and laptop easier. Normally I have to find a cable to connect my phone with my laptop to transfer my photos, or I have to select individual photos and select "share to" -> "dropbox" for each of them, or I am only able to sync all my photos automatically in the background. As I wasn't happy with all these options, I wrote my own syncing app :)
+**Dropbox Photo Sync** aka **PhotoDrops** is an Android app that allows you to sync selected photos on your cell phone with Dropbox. It uses Dropbox's Android Sync API and has been written as a pet project to try out the API. The inspiration came from wanting to make photo transfer between my cell phone and laptop easier. Normally I have to find a cable to connect my phone with my laptop to transfer my photos, or I have to select individual photos and select "share to" -> "dropbox" for each of them, or I am only able to sync all my photos automatically in the background. As I wasn't happy with all these options, I wrote my own syncing app :)
 
 ## Usage
+
+PhotoDrops is still very much work in progress, but feel free to try it out and contribute.
+
+PhotoDrops requires a Dropbox account and and Android dev environment in Eclipse to build the project.
+
+To fix the compatibility issues, you additionally need to import appcompat-v7. Go to Import -> Import Existing Android Project. Go to your android SDK directory and select extras/android/support/v7/appcompat as the project. Finish the project import. You should have another project android-support-v7-appcompat now.
+
+Now go to Project Properties -> Android and add android-support-v7-appcompat as a Library ("is Library" doesn't have to be checked). You might have to delete existing broken references.
+
+I'm not sure why Eclipse now always creates these compatibility issues with Android projects, but hopefully this fixes it.
+
+After all the errors are gone, just compile and run the project like you would with any other Android project.
+
+Let me know if there are any other issues.
 
 ## Code
 
