@@ -6,7 +6,7 @@ Right now it's still very much work in progress, but feel free to try it out and
 
 ## Usage
 
-The preferred way to get the app is to compile and install from source code. Check out Development for that. Otherwise you can also downlod the apk at http://swifflet.com/photodrops/PhotoDrops.apk (no guarantee that it's the most up-to-date one though).
+The preferred way to get the app is to compile and install from source code. Check out Development for that. Otherwise feel free to ping me to get the apk.
 
 After you have installed the app on your Android phone, you should see a screen with [Connect to Dropbox], [Select photos] and [Sync with Dropbox].
 The app automatically syncs to the dropbox folder /Photos/PhotoDrops, overwriting existing photos in there with the same filename.
